@@ -1,0 +1,14 @@
+C:\Users\Asus\Desktop\tasks\task24_10\bin\Debug\net6.0\task16.exe
+C:\Users\Asus\Desktop\tasks\task24_10\bin\Debug\net6.0\task16.deps.json
+C:\Users\Asus\Desktop\tasks\task24_10\bin\Debug\net6.0\task16.runtimeconfig.json
+C:\Users\Asus\Desktop\tasks\task24_10\bin\Debug\net6.0\task16.dll
+C:\Users\Asus\Desktop\tasks\task24_10\bin\Debug\net6.0\task16.pdb
+C:\Users\Asus\Desktop\tasks\task24_10\obj\Debug\net6.0\task16.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\tasks\task24_10\obj\Debug\net6.0\task16.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\tasks\task24_10\obj\Debug\net6.0\task16.AssemblyInfo.cs
+C:\Users\Asus\Desktop\tasks\task24_10\obj\Debug\net6.0\task16.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\tasks\task24_10\obj\Debug\net6.0\task16.dll
+C:\Users\Asus\Desktop\tasks\task24_10\obj\Debug\net6.0\refint\task16.dll
+C:\Users\Asus\Desktop\tasks\task24_10\obj\Debug\net6.0\task16.pdb
+C:\Users\Asus\Desktop\tasks\task24_10\obj\Debug\net6.0\task16.genruntimeconfig.cache
+C:\Users\Asus\Desktop\tasks\task24_10\obj\Debug\net6.0\ref\task16.dll

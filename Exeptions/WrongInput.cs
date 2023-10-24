@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace task16.Exeptions
 {
-    internal class WrongInput
+    internal class WrongInput:Exception
     {
+        private const string _message = "Sehv deyer daxil edildi";
+        public WrongInput(string message = _message) : base(message)
+        {
+
+        }
     }
 }
+ 

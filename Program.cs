@@ -28,17 +28,21 @@ namespace task16
                     switch (choice)
                     {
                         case "1":
-
-                            break;
+                        Console.Clear();
+                        AddQuiz(quizzes);
+                        break;
                         case "2":
-
-                            break;
+                        Console.Clear();
+                        Quiz.SolveQuiz(SelectQuiz(quizzes));
+                        break;
                         case "3":
-
-                            break;
+                        Console.Clear();
+                        
+                        ShowQuizzes(quizzes);
+                        break;
                         case "0":
 
-                            Console.WriteLine("Quiz bitdi.");
+                           Console.WriteLine("Quiz bitdi.");
                             return;
 
                         default:
@@ -53,28 +57,55 @@ namespace task16
             }
             goto restartSwitch;
         }
-        public static void CreateQuiz(List<Quiz> quizzes)
+        public static void AddQuiz(List<Quiz> quizzes)
         {
-            Console.WriteLine("Quizin adini daxil edin:");
-            string name = Console.ReadLine().Trim();
-            name = char.ToUpper(name[0]) + name.Substring(1).ToLower();
-            foreach (var item in quizzes )
+            quizzes.Add(Quiz.CreateQuiz(quizzes));
+
+        }
+
+
+
+        public static void ShowQuizzes(List<Quiz> quizzes)          //shamamadan komek aldim , asagidaki kod islemirdi
+        {
+            if (quizzes != null && quizzes.Count > 0)
             {
-                if (item.Name == name)
+                foreach (Quiz quiz in quizzes)
                 {
-                    throw new QuizAlreadyExits();
+                    Console.WriteLine($"{quiz.Id} --- {quiz.Name}");
                 }
-            }
-            if (name.Length > 3 && name.Length < 25)
-            { List<Question> questions = new();
-                Quiz quiz = new(name, questions);
-                quizzes.Add(quiz);
             }
             else
             {
-                throw new WrongInput("Duzgun deyer daxil edin");
+                Console.WriteLine("Hec bir quiziniz yoxdur ");
             }
-            
+        }  
+        //public static void ShowQuizzes(List<Quiz> quizzes)
+        //{
+        //    if (quizzes == null)
+        //    {
+        //        Console.WriteLine("Hec bir quiziniz yoxdur");
+        //    }
+        //    else
+        //    {
+        //        foreach (Quiz quiz in quizzes)
+        //        {
+        //            Console.WriteLine(quiz);
+        //        }
+        //    }
+        //}
+        public static Quiz SelectQuiz(List<Quiz> quizes)
+        {
+            Console.WriteLine("Quizin ID sini daxil edin");
+            ShowQuizzes(quizes);
+            bool isParse = int.TryParse(Console.ReadLine(), out int id);
+            if (!isParse)
+            {
+                throw new WrongInput();
+            }
+            var quiz = quizes.FirstOrDefault(x => x.Id == id);
+            return quiz;
+
+
         }
     }
 }

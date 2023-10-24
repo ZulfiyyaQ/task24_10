@@ -66,14 +66,15 @@ namespace task16
                 }
             }
             if (name.Length > 3 && name.Length < 25)
-            {
-                quizzes.Add();
+            { List<Question> questions = new();
+                Quiz quiz = new(name, questions);
+                quizzes.Add(quiz);
             }
             else
             {
                 throw new WrongInput("Duzgun deyer daxil edin");
             }
-            break;
+            
         }
     }
 }
